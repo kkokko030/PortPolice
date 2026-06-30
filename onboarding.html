@@ -18,40 +18,100 @@
     </header>
 
     <main class="onboarding-main">
-        <section class="onboarding-box">
-            <div class="onboarding-tabs">
-                <button class="onboarding-tab active" data-step="job">직무
-                    <span class="status">✔</span>
-                </button>
-                <button class="onboarding-tab" data-step="region">지역
-                    <span class="status">✔</span>
-                </button>
-                <button class="onboarding-tab" data-step="career">경력
-                    <span class="status">✔</span>
-                </button>
-                <button class="onboarding-tab" data-step="education">학력
-                    <span class="status">✔</span>
-                </button>
-                <button class="onboarding-tab" data-step="certificate">자격증
-                    <span class="status">✔</span>
-                </button>
-                <button class="onboarding-tab" data-step="employment">고용형태
-                    <span class="status">✔</span>
-                </button>
+        <section class="onboarding-form-box">
+
+            <div class="onboarding-title">
+                <h1>기본 정보를 입력해주세요</h1>
+                <p>포트폴리오 카드 추천에 사용할 최소 정보를 선택합니다.</p>
             </div>
 
-            <div class="onboarding-content" id="onboardingContent">
-                <h2>직무를 선택해주세요</h2>
-                <p>희망하는 직무를 선택하면 이후 포트폴리오 카드 추천 기준으로 사용됩니다.</p>
-            </div>
-           
-        </section>
-        <section>
-            <div class="onboarding-footer">
-                <button class="next-btn" id="nextBtn">
+            <form class="onboarding-form">
+
+                <div class="form-group full">
+                    <label>직무</label>
+                    <select>
+                        <option>직무를 선택해주세요</option>
+                        <option>기획·전략</option>
+                        <option>마케팅·홍보·조사</option>
+                        <option>회계·세무·재무</option>
+                        <option>인사·노무·HRD</option>
+                        <option>총무·법무·사무</option>
+                        <option>영업·판매·무역</option>
+                        <option>고객상담·TM</option>
+                        <option>IT개발·데이터</option>
+                        <option>디자인</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>지역</label>
+                        <input type="text" placeholder="예: 서울, 경기, 부산">
+                    </div>
+
+                    <div class="form-group">
+                        <label>경력</label>
+                        <select>
+                            <option>신입</option>
+                            <option>인턴</option>
+                            <option>1년 미만</option>
+                            <option>1~3년</option>
+                            <option>3~5년</option>
+                            <option>5년 이상</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>학력</label>
+                        <select>
+                            <option>고등학교 졸업</option>
+                            <option>전문대 재학</option>
+                            <option>전문대 졸업</option>
+                            <option>대학교 재학</option>
+                            <option>대학교 졸업</option>
+                            <option>석사</option>
+                            <option>박사</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>고용형태</label>
+                        <select>
+                            <option>정규직</option>
+                            <option>계약직</option>
+                            <option>인턴</option>
+                            <option>프리랜서</option>
+                            <option>파트타임</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group full">
+                    <label>자격증</label>
+                    <input type="text" placeholder="예: 정보처리기사, SQLD, ADsP">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>자격증 증빙 파일</label>
+                        <input type="file" accept=".pdf,.jpg,.jpeg,.png">
+                    </div>
+
+                    <div class="form-group">
+                        <label>자격증 인증 링크</label>
+                        <input type="url" placeholder="자격증 조회 URL이 있다면 입력">
+                    </div>
+                </div>
+                <p class="form-help">
+                    증빙 자료는 포트폴리오 문장의 신뢰도를 높이는 데 사용됩니다.
+                  </p>
+
+                <button type="button" class="next-btn" onclick="location.href='project-input.html'">
                     다음으로 →
                 </button>
-            </div>
+
+            </form>
         </section>
     </main>
     <script src="script.js"></script>
