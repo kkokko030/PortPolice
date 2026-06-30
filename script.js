@@ -321,3 +321,63 @@ if (continueBtn) {
         location.href = "onboarding.html";
     });
 }
+
+// 온보딩 내용
+const onboardingTabs = document.querySelectorAll(".onboarding-tab");
+const onboardingContent = document.querySelector("#onboardingContent");
+
+const onboardingData = {
+    job: {
+        title: "직무를 선택해주세요",
+        desc: "희망하는 직무를 선택하면 이후 포트폴리오 카드 추천 기준으로 사용됩니다."
+    },
+    region: {
+        title: "지역을 선택해주세요",
+        desc: "근무를 희망하는 지역을 선택해주세요."
+    },
+    career: {
+        title: "경력을 선택해주세요",
+        desc: "신입, 인턴, 주니어, 경력 등 현재 상태를 선택합니다."
+    },
+    education: {
+        title: "학력을 입력해주세요",
+        desc: "최종 학력이나 현재 재학 상태를 입력합니다."
+    },
+    certificate: {
+        title: "자격증을 입력해주세요",
+        desc: "보유한 자격증이 있다면 입력해주세요. 없다면 건너뛰어도 됩니다."
+    },
+    employment: {
+        title: "고용형태를 선택해주세요",
+        desc: "정규직, 인턴, 계약직 등 희망하는 고용형태를 선택합니다."
+    }
+};
+
+if (onboardingTabs.length && onboardingContent) {
+    onboardingTabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            onboardingTabs.forEach((item) => item.classList.remove("active"));
+            tab.classList.add("active");
+
+            const step = tab.dataset.step;
+            const data = onboardingData[step];
+
+            onboardingContent.innerHTML = `
+        <h2>${data.title}</h2>
+        <p>${data.desc}</p>
+      `;
+        });
+    });
+}
+
+function completeStep(step){
+
+    const tab = document.querySelector(
+        `.onboarding-tab[data-step="${step}"]`
+    );
+
+    const status = tab.querySelector(".status");
+
+    status.classList.add("complete");
+
+}

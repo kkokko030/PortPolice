@@ -17,15 +17,44 @@
         </div>
     </header>
 
-    <main class="container">
+    <main class="onboarding-main">
+        <section class="onboarding-box">
+            <div class="onboarding-tabs">
+                <button class="onboarding-tab active" data-step="job">직무
+                    <span class="status">✔</span>
+                </button>
+                <button class="onboarding-tab" data-step="region">지역
+                    <span class="status">✔</span>
+                </button>
+                <button class="onboarding-tab" data-step="career">경력
+                    <span class="status">✔</span>
+                </button>
+                <button class="onboarding-tab" data-step="education">학력
+                    <span class="status">✔</span>
+                </button>
+                <button class="onboarding-tab" data-step="certificate">자격증
+                    <span class="status">✔</span>
+                </button>
+                <button class="onboarding-tab" data-step="employment">고용형태
+                    <span class="status">✔</span>
+                </button>
+            </div>
 
-        <section class="hero">
-            <h1>온보딩 페이지</h1>
-            <p>여기에 직군, 경력, 지역 등을 입력받는 화면이 들어갑니다.</p>
+            <div class="onboarding-content" id="onboardingContent">
+                <h2>직무를 선택해주세요</h2>
+                <p>희망하는 직무를 선택하면 이후 포트폴리오 카드 추천 기준으로 사용됩니다.</p>
+            </div>
+           
         </section>
-
+        <section>
+            <div class="onboarding-footer">
+                <button class="next-btn" id="nextBtn">
+                    다음으로 →
+                </button>
+            </div>
+        </section>
     </main>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
