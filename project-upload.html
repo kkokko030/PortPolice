@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PortPolice | project-upload</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="myhome.html">PortPolice</a>
+    </div>
+  </header>
+
+  <main class="onboarding-main">
+    <section class="onboarding-form-box">
+      <div class="onboarding-title">
+        <h1>Upload</h1>
+        <p>본인의 프로젝트 정리 파일이나 AI 대화 내보내기 파일을 업로드해주세요.</p>
+      </div>
+
+      <form class="onboarding-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>프로젝트 업로드 파일</label>
+            <div class="upload-box" id="portfolioUpload">
+              <input type="file" id="portfolioFile" accept=".json,.zip,.txt,.md,.pdf" hidden multiple>
+              <div class="upload-content">
+
+                <div class="upload-icon">
+                  <svg width="56" height="56" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 16V4" stroke="#2563EB" stroke-width="2" stroke-linecap="round" />
+                    <path d="M8 8L12 4L16 8" stroke="#2563EB" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M5 20H19" stroke="#2563EB" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </div>
+
+                <h3>포트폴리오 자료 업로드</h3>
+
+                <p>
+                  json, zip, txt, md, pdf 파일을 드래그하거나
+                  클릭하여 업로드하세요.
+                </p>
+
+                <span class="upload-button">
+                  파일 선택
+                </span>
+
+                <small id="fileName">
+                  선택된 파일이 없습니다.
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="next-btn" id="project-uploadNextBtn">
+          다음으로 →
+        </button>
+      </form>
+    </section>
+  </main>
+  <div class="warning-modal" id="warningModal" hidden>
+    <div class="warning-card">
+      <h3>파일을 업로드해주세요.</h3>
+      <p id="warningText"></p>
+      <button type="button" id="warningCloseBtn">확인</button>
+    </div>
+  </div>
+  <script src="project-upload.js"></script>
+</body>
+
+</html>
