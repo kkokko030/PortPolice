@@ -95,7 +95,34 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label>자격증 증빙 파일</label>
-                        <input type="file" accept=".pdf,.jpg,.jpeg,.png">
+                        <div class="upload-box" id="certificateUpload">
+
+                            <input type="file" id="certificateFile" accept=".pdf,.jpg,.jpeg,.png" hidden multiple>
+
+                            <div class="upload-content">
+
+                                <div class="upload-icon">
+                                    📄
+                                </div>
+
+                                <h3>증빙 자료 업로드</h3>
+
+                                <p>
+                                    PDF, JPG, PNG 파일을 드래그하거나
+                                    클릭하여 업로드하세요.
+                                </p>
+
+                                <span class="upload-button">
+                                    파일 선택
+                                </span>
+
+                                <small id="fileName">
+                                    선택된 파일이 없습니다.
+                                </small>
+
+                            </div>
+
+                        </div>
                     </div>
 
                     <div class="form-group">
@@ -105,7 +132,7 @@
                 </div>
                 <p class="form-help">
                     증빙 자료는 포트폴리오 문장의 신뢰도를 높이는 데 사용됩니다.
-                  </p>
+                </p>
 
                 <button type="button" class="next-btn" onclick="location.href='project-input.html'">
                     다음으로 →
@@ -114,7 +141,7 @@
             </form>
         </section>
     </main>
-    <script src="script.js"></script>
+    <script src="onboarding.js"></script>
 </body>
 
 </html>

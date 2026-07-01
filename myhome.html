@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<style>
+    main.login-wrapper {
+        min-height: calc(100vh - 90px);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortPolice | 로그인</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="myhome.html">PortPolice</a>
+        </div>
+    </header>
+
+    <main class="home-layout">
+
+        <aside class="sidebar" id="sidebar">
+            <button class="sidebar-toggle" id="sidebarToggle" type="button">☰</button>
+
+            <nav class="side-menu">
+                <a href="#" data-section="portfolioSection"><span>포트폴리오</span></a>
+                <a href="#" data-section="portfolioCardSection"><span>포트폴리오 카드</span></a>
+                <a href="#" data-section="certificateSection"><span>자격증</span></a>
+            </nav>
+
+            <div class="account-box">
+
+                <button class="account-btn" id="accountBtn" type="button">
+
+                    <div class="account-avatar">
+                        M
+                    </div>
+
+                    <div class="account-info">
+                        <span class="account-name">민기</span>
+                        <span class="account-plan">Free Plan</span>
+                    </div>
+
+                    <span class="account-arrow">⌄</span>
+
+                </button>
+
+                <div class="account-menu" id="accountMenu">
+                    <a href="#">👤 내 정보</a>
+                    <a href="#">⚙ 설정</a>
+                    <a href="#">💳 플랜 관리</a>
+                    <hr>
+                    <a href="index.html">🚪 로그아웃</a>
+                </div>
+
+            </div>
+        </aside>
+
+        <section class="home-content">
+            <section id="dashboardSection" class="home-section">
+                <h1>내 홈</h1>
+                <p>PortPolice에서 포트폴리오 카드와 증빙 자료를 관리하세요.</p>
+            </section>
+
+            <section id="portfolioCardSection" class="home-section" hidden>
+                <div class="empty-state">
+                    <h1>포트폴리오 카드</h1>
+                    <h2>아직 생성된 포트폴리오 카드가 없습니다.</h2>
+                    <p>AI 대화 내보내기 파일을 업로드하거나 프로젝트를 직접 입력하면 카드가 생성됩니다.</p>
+                    <a  href="onboarding.html" class="hero-button"> 새 카드 만들기</a>
+                </div>
+            </section>
+
+            <section id="portfolioSection" class="home-section" hidden>
+                <h1>포트폴리오</h1>
+                <p>완성된 포트폴리오를 확인하고 관리합니다.</p>
+                <h2>아직 생성된 포트폴리오가 없습니다.</h2>
+                <a href="onboarding.html" class="hero-button"> 새 포트폴리오 만들기</a>
+            </section>
+
+            <section id="certificateSection" class="home-section" hidden>
+                <h1>자격증</h1>
+                <p>자격증과 증빙 자료를 관리합니다.</p>
+            </section>
+
+            <section id="profileSection" class="home-section" hidden>
+                <h1>내 정보</h1>
+                <p>직무, 경력, 지역 등 기본 정보를 수정합니다.</p>
+            </section>
+
+            <section id="settingSection" class="home-section" hidden>
+                <h1>설정</h1>
+                <p>계정 및 서비스 설정을 관리합니다.</p>
+            </section>
+        </section>
+
+    </main>
+
+    <script src="myhome.js"></script>
+</body>
+
+</html>
